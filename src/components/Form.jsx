@@ -5,18 +5,17 @@ import { useState, useEffect } from 'react'
 
 export default function Form(){
     // Define state variables and handlers
-    const [taskInput, inputHandler] = useState("");
-    const [allTasks, addNewTask] = useState([]);
+    const [task, setTask] = useState("");
+    const [tasks, setTasks] = useState([]);
 
     // Creates a new task obj an adds to all tasks
-    const createNewTask = function(e){
-	if (taskInput !== ''){
-	    const val = [...allTasks,
-			 {task: taskInput, id: getTaskId()}];
-	    //console.log(val);
-	    addNewTask(val);
-	} else{
-	    console.log("missing field");
+    const addNewTask = function(e){
+	if (task !== ''){
+	    setTasks(
+		[
+		    ...tasks,
+		    { task: task, id: getTaskId() }
+		]);
 	}
 	e.preventDefault();
     }
@@ -29,11 +28,11 @@ export default function Form(){
     }
 
     return (
-	<form onSubmit={(e) => createNewTask(e)}>
-	  <input onChange={(e) => inputHandler(e.target.value)}
+	<form onSubmit={(e) => addNewTask(e)}>
+	  <input onChange={(e) => setTask(e.target.value)}
 		 type="text" id="todo-input"
 		 placeholder="Enter task"
-		 value={taskInput}/>
+		 value={task}/>
 	  <button id="add-task-btn" className="btn">
 	    Add Task
 	  </button>
