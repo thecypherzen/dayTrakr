@@ -33,6 +33,6 @@ export default function Task(){
     return (
 	<>
 	  <Form setTask={setTask} addNewTask={addNewTask} task={task}/>
-	  < TaskList tasks={ tasks }/>
+	  < TaskList tasks={ tasks } setTasks={ setTasks }/>
 	</>);
 }

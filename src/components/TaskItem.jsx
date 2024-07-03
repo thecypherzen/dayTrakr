@@ -2,7 +2,12 @@
 import '../App.css'
 import styles from './taskItem.module.css'
 
-export default function TaskItem({ task, idx, length }){
+export default function TaskItem({ task, idx, length, tasks, setTasks }){
+    const deleteTask = function(id){
+	tasks = tasks.filter((task) => task.id !== id);
+	setTasks(tasks);
+    }
+
     return (
 	<div id="task-item" key={ task.id }
 	     className={ styles["item-container"] }>
@@ -11,7 +16,8 @@ export default function TaskItem({ task, idx, length }){
 	    <span className={ styles["task-name"] }>
 	      { task.task }
 	    </span>
-    	    <span className={ styles["task-delete"] }> x </span>
+    	    <span onClick={ () => deleteTask(task.id) }
+	      className={ styles["task-delete"] }> x </span>
 	  </div>
 
 	  <hr className={ idx === length - 1 ?

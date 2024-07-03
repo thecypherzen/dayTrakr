@@ -3,7 +3,7 @@ import '../App.css'
 import styles from './taskList.module.css'
 import TaskItem from './TaskItem'
 
-export default function TaskList({ tasks }){
+export default function TaskList({ tasks, setTasks }){
     let length = tasks.length;
 
     return (
@@ -14,7 +14,9 @@ export default function TaskList({ tasks }){
 		return (
 		    <TaskItem key={ task.id} task={ task }
 			      idx={ tasks.indexOf(task) }
-			      length={ length }/>
+			      length={ length }
+			      tasks={ tasks }
+			      setTasks={ setTasks }/>
 		);
 	    }) }
 	      </div>
