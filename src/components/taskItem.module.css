@@ -22,10 +22,15 @@ span{
 }
 
 .task-name{
-    font-weight: 700;
+    font-weight: 800;
     margin-block: auto;
     flex: 3.9;
 }
+
+.task-name:hover{
+    cursor: pointer;
+}
+
 
 .task-delete{
     float: right;
@@ -54,4 +59,10 @@ span{
 
 .hidden{
     display: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--color-success);
 }

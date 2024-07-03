@@ -27,6 +27,8 @@ export default function Task(){
 	);
     }
 
+    // calculate statistics
+
     return (
 	<>
 	  <Form setTask={setTask} addNewTask={addNewTask} task={task}/>
