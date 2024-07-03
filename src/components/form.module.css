@@ -1,0 +1,40 @@
+form {
+    height: 11vh;
+    background: var(--color-white);
+    margin-top: 40px !important;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+
+.form-group{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-gap: 5px;
+    padding: 15px;
+}
+
+.form-group input{
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+}
+
+.form-group input:focus{
+    outline: none;
+}
+
+.form-group button{
+    font-size: 1.5rem;
+    background: var(--color-primary);
+    color: var(--color-light);
+    transition: all 0.5s linear;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-group button:hover{
+    background: var(--color-primary-dark);
+}
