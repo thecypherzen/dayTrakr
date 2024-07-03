@@ -4,8 +4,7 @@ import styles from './taskItem.module.css'
 
 export default function TaskItem({ task, idx, length, tasks, setTasks }){
     const deleteTask = function(id){
-	tasks = tasks.filter((task) => task.id !== id);
-	setTasks(tasks);
+	setTasks(tasks.filter((task) => task.id !== id));
     }
 
     return (

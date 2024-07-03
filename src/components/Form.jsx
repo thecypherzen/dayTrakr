@@ -9,10 +9,12 @@ export default function Form({ task, addNewTask, setTask }){
 	<form className="container"
 	      onSubmit={(e) => addNewTask(e)}>
 	  <div className={ styles["form-group"] }>
-            <input onChange={(e) => setTask(e.target.value)}
+            <input onChange={(e) => {
+		  return setTask({ task: e.target.value, completed:false })
+	      }}
 	      type="text" id="todo-input"
 	      placeholder="Enter task here..."
-	      value={task}/>
+	      value={task.task}/>
               <button id="add-task-btn" className="btn">
 		Add Task
               </button>

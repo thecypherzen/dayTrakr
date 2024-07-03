@@ -7,18 +7,15 @@ import Form from './Form'
 
 export default function Task(){
     // Define state variables and handlers
-    const [task, setTask] = useState("");
+    const [task, setTask] = useState({ task:"" });
     const [tasks, setTasks] = useState([]);
 
     // Creates a new task obj an adds to all tasks
     const addNewTask = function(e){
-	if (task !== ''){
-	    setTasks(
-		[
-		    ...tasks,
-		    { task: task, id: getTaskId() }
-		]);
-	    setTask("");
+	if (task.task){
+	    task.id = getTaskId();
+	    setTasks([ ...tasks, task ]);
+	    setTask({ task:"" });
 	}
 	e.preventDefault();
     }
