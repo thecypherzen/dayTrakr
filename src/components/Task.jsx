@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from 'react'
 import TaskList from './TaskList'
+import Footer from './Footer'
 import Form from './Form'
 
 export default function Task(){
@@ -32,6 +33,7 @@ export default function Task(){
     return (
 	<>
 	  <Form setTask={setTask} addNewTask={addNewTask} task={task}/>
-	  < TaskList tasks={ tasks } setTasks={ setTasks }/>
+	  <TaskList tasks={ tasks } setTasks={ setTasks }/>
+	  <Footer tasks={ tasks } />
 	</>);
 }
