@@ -1,0 +1,4 @@
+.tasks-section{
+    min-height: calc(100vh - 55vh - 52px);
+    margin-block: 20px;
+}

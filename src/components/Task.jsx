@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react'
 import TaskList from './TaskList'
 import Footer from './Footer'
 import Form from './Form'
+import styles from './task.module.css'
+
 
 export default function Task(){
     // Define state variables and handlers
@@ -28,12 +30,12 @@ export default function Task(){
 	);
     }
 
-    // calculate statistics
-
     return (
 	<>
 	  <Form setTask={setTask} addNewTask={addNewTask} task={task}/>
-	  <TaskList tasks={ tasks } setTasks={ setTasks }/>
+	  <section className={ styles["tasks-section"] } >
+	    <TaskList tasks={ tasks } setTasks={ setTasks }/>
+	  </section>
 	  <Footer tasks={ tasks } />
 	</>);
 }
