@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Comfortaa:wght@300..700&family=Syne:wght@400..800&display=swap');
+
+:root{
+    --color-primary: #477890;
+    --color-primary-dark: #386073;
+    --color-primary-light: #ecf1f3;
+    --color-black: #1D201F;
+    --color-white: #fff;
+    --color-light: #D1DEDE;
+    --color-secondary: #72B01D; /* */
+    --color-accent: #3A6EA5;
+    --color-success: #35FF69;
+    --color-danger: #EB5E55;
+    font-size: 10px;
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+
+body{
+    color: var(--color-black);
+    font-family: "Syne", sans-serif;
+    font-size: 1.4rem !important;
+}
+
+h1, h2{
+    font-family: "Archivo Black", sans-serif;
+}
+
+.container{
+    width: clamp(256px, 80vw, 620px);
+    margin:auto;
+}
