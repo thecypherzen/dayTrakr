@@ -9,14 +9,17 @@ export default function Footer({ tasks }){
 
     return (
 	<footer>
-	  <div id="summary-info" className={ styles["summary-info" ] }>
-	    <span className={ styles["completed"] }>
-	      Completed: { completed }
-	    </span>
-	    <span className={ styles.total }>
-	      Total: { tasks.length }
-	    </span>
-	  </div>
+	  <section id="summary-section"
+	       className={ styles["summary-section" ] } >
+	    <div className={ `container ${ styles["summary-info"] }` }>
+	      <span className={ styles["completed"] }>
+		Completed: { completed }
+	      </span>
+	      <span className={ styles.total }>
+		Total: { tasks.length }
+	      </span>
+	    </div>
+	  </section>
 	  <div className={ styles.copy }> &copy;William Inyam | 2024 </div>
 	</footer>
     );
