@@ -1,4 +1,5 @@
 .tasks-section{
-    min-height: calc(100vh - 55vh - 52px);
-    margin-block: 20px;
+    height: calc(100vh - 55vh);
+    padding-block: 20px;
+    overflow: scroll;
 }
