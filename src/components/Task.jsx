@@ -29,7 +29,6 @@ export default function Task(){
 		Math.random().toString(36).substr(2)
 	);
     }
-
     return (
 	<>
 	  <Form setTask={setTask} addNewTask={addNewTask} task={task}/>
