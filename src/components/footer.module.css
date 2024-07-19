@@ -6,7 +6,7 @@ footer {
     font-size: 1.7rem;
     color: var(--color-light);
     background: var(--color-primary);
-    align-item: space-between;
+    align-items: space-between;
 }
 
 .summary-section{
