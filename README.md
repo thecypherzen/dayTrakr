@@ -7,6 +7,8 @@ It begins with very few features, but promises to be improved upon as time goes 
 
 Data is persited to browser local storage at the beginning, pending when the database persistence would be rolled out.
 
+## View ##
+You can take a look a the current stable version of the project [here](https://daytrakr.onrender.com/).
 ---
 ## Features
 ### Implemented
